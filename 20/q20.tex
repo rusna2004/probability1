@@ -1,5 +1,6 @@
 \documentclass[]{article}
 \usepackage{amsfonts, amssymb, amsmath}
+\usepackage{float}
 \begin{document}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\prt}[2]{\ensuremath{p_{#1}^{\left(#2\right)} }}        % own macro for this question
@@ -67,21 +68,45 @@
 
 20. Two dice are thrown simultaneously. What is the probability that the sum of the numbers appearing on the dice is (\romannumeral1) 7? (\romannumeral2) a prime number? (\romannumeral3) 1?
 
-\solution Two dice are thrown simultaneously. So, total number of possible outcomes = 36
+\solution When one die shows `1', the other die could show any one of the numbers 1,2,3,4,5,6. The same is true when the first die shows `2', `3', `4', `5' or `6'. The possible outcomes of the experiment are listed below; the first number in each ordered pair is the number appearing on the first die and the second number is that on the other die.
 
-(\romannumeral1) Sum of the numbers appearing on dice is 7
-The favourable outcomes are (1,6), (2,5), (3,4), (4,3), and (5,2).
-Number of favourable outcomes = 6
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c c c c c c}
+&1&2&3&4&5&6\\
+\hline
+1&(1,1)&(1,2)&(1,3)&(1,4)&(1,5)&(1,6)\\
+2&(2,1)&(2,2)&(2,3)&(2,4)&(2,5)&(2,6)\\
+3&(3,1)&(3,2)&(3,3)&(3,4)&(3,5)&(3,6)\\
+4&(4,1)&(4,2)&(4,3)&(4,4)&(4,5)&(4,6)\\
+5&(5,1)&(5,2)&(5,3)&(5,4)&(5,5)&(5,6)\\
+6&(6,1)&(6,2)&(6,3)&(6,4)&(6,5)&(6,6)\\
+\end{tabular}
+\label{tab:outcomes}
+\end{table}
+
+So, the number of possible outcomes $=6 \times 6=36$
+
+(\romannumeral1) The outcomes favourable to the event `the sum of the two numbers is 7' denoted by E are: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1)  (see figure above) \\
+i.e., the number of favourable outcomes to E = 5.
+Hence,
 \begin{align}
-\text{Required probability} = \frac{6}{36} = \frac{1}{6}
+P(E) &= \frac{6}{36}\\
+&= \frac{1}{6}
 \end{align}
 
-(\romannumeral2) Sum of the numbers appearing on dice is a prime number.
-The favourable outcomes are (1,1), (1,2), (1,4), (1,6), (2,1), (2,3), (2,5), (3,2), (3,4), (4,1), (4,3), (5,2), (5,6), (6,1) and (6,5).
-Number of favourable outcomes = 15
+(\romannumeral2) As you can see from figure above, the outcomes of the event F, `the sum of the two numbers is a prime number' are: (1,1), (1,2), (1,4), (1,6), (2,1), (2,3), (2,5), (3,2), (3,4), (4,1), (4,3), (5,2), (5,6), (6,1), (6,5) \\
+i.e., the number of favourable outcomes to F = 15 \\
+So,
 \begin{align}
-\text{Required probability} = \frac{15}{36} = \frac{5}{12}
+P(F) &= \frac{15}{36}\\
+&= \frac{5}{12}
 \end{align}
 
-(\romannumeral3) Sum of the numbers appearing on the dice is 1. It is not possible, so the probability is zero.
+(\romannumeral3) As you can see from figure above, there is no outcome favourable to the event G, `the sum of two numbers is 1'.\\
+So,
+\begin{align}
+P(G) &= \frac{0}{36} \\
+&= 0 
+\end{align}
 \end{document}
